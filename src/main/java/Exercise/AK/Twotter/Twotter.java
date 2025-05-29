@@ -15,7 +15,7 @@ public class Twotter
         List<Message> m =
                 system.getAllMessagesFromDate(
                         "2019-05-31");
-        List<Message> d =
+        List<Message> d = haha
                 system.getAllMessagesFromUser(u);
     }
 }
