@@ -1,6 +1,6 @@
-# java-21-maven-template
+# Programmieren2-Java 21
 
-Java 21 Maven Template
+Java 21 Maven
 
 ## Build and run
 
