@@ -1,15 +1,13 @@
 package Exercise.AK.Fahrt;
 
-public class Elektroroller extends Fahrzeug implements EFahrzeug{
+public class Elektroroller extends Fahrzeug implements EFahrzeug {
     @Override
-    public double berechneEntgelte(Fahrt f){
-         return 3.15 * f.km;
+    public double berechneEntgelte(Fahrt f) {
+        return 3.15 * f.km;
     }
 
     @Override
-    public void kehreZurueckZurLadestation(){
+    public void kehreZurueckZurLadestation() {
         System.out.println("Elektroroller wurde zur Ladestation zurückgekehrt.");
     }
-
-
 }

@@ -1,15 +1,14 @@
 package Bib;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import Exercise.AK.Bib.Bibliothek;
 import Exercise.AK.Bib.Buch;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class BibliothekTest {
     Buch buch1;
@@ -19,7 +18,7 @@ public class BibliothekTest {
     Bibliothek bib;
 
     @BeforeEach
-    void setup(){
+    void setup() {
         buch1 = new Buch("Ari", "Bob", "Vangoh", 1500);
         buch2 = new Buch("Ari2", "Bob", "Vangoh", 1800);
         buch3 = new Buch("Contry", "Ace", "Haha", 1500);
@@ -30,14 +29,13 @@ public class BibliothekTest {
     }
 
     @Test
-    void sortierungTest(){
-    bib.sortiereNachAutorDannNachName();
-    List<Buch> sortierteList = bib.getBibList();
+    void sortierungTest() {
+        bib.sortiereNachAutorDannNachName();
+        List<Buch> sortierteList = bib.getBibList();
 
-    assertEquals(buch3, sortierteList.get(0));
-    assertEquals(buch4, sortierteList.get(1));
-    assertEquals(buch1, sortierteList.get(2));
-    assertEquals(buch2, sortierteList.get(3));
-
+        assertEquals(buch3, sortierteList.get(0));
+        assertEquals(buch4, sortierteList.get(1));
+        assertEquals(buch1, sortierteList.get(2));
+        assertEquals(buch2, sortierteList.get(3));
     }
 }

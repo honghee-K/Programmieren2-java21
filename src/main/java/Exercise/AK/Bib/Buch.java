@@ -1,14 +1,13 @@
 package Exercise.AK.Bib;
-public class Buch implements IBuch
-{
+
+public class Buch implements IBuch {
     String name;
     String autor;
     String verlag;
     int preisInCents;
     // int seitenzahl; Änderung
 
-    public Buch(String name, String autor, String verlag, int preisInCents)
-    {
+    public Buch(String name, String autor, String verlag, int preisInCents) {
         this.name = name;
         this.autor = autor;
         this.verlag = verlag;
@@ -16,11 +15,12 @@ public class Buch implements IBuch
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return name;
     }
+
     @Override
-    public String getAutor(){
+    public String getAutor() {
         return autor;
     }
 }

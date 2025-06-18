@@ -1,6 +1,6 @@
 package Exercise.AK.Bib;
 
-public class Hoerbuch extends Buch implements IBuch{
+public class Hoerbuch extends Buch implements IBuch {
 
     String sprecher;
     int spieldauer;
@@ -12,15 +12,12 @@ public class Hoerbuch extends Buch implements IBuch{
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     @Override
-    public String getAutor(){
+    public String getAutor() {
         return autor;
     }
-
-
 }
-

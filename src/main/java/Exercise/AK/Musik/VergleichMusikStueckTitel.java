@@ -1,12 +1,11 @@
-    package Exercise.AK.Musik;
+package Exercise.AK.Musik;
 
-    import java.util.Comparator;
+import java.util.Comparator;
 
-    public class VergleichMusikStueckTitel implements Comparator<MusikStueck> {
+public class VergleichMusikStueckTitel implements Comparator<MusikStueck> {
 
-        @Override
-            public int compare(MusikStueck a, MusikStueck b){
-                return a.getTitel().compareTo(b.getTitel());
-            }
-
+    @Override
+    public int compare(MusikStueck a, MusikStueck b) {
+        return a.getTitel().compareTo(b.getTitel());
     }
+}

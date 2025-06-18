@@ -1,13 +1,14 @@
 package Exercise.AK.Fahrt;
 
-public class EBike extends Fahrzeug implements EFahrzeug{
+public class EBike extends Fahrzeug implements EFahrzeug {
 
     @Override
-    public double berechneEntgelte(Fahrt f){
+    public double berechneEntgelte(Fahrt f) {
         return 0.125 * f.min;
     }
+
     @Override
-    public void kehreZurueckZurLadestation(){
+    public void kehreZurueckZurLadestation() {
         System.out.println("E-Bike wurde zur Ladestation zurückgekehrt.");
     }
 }
