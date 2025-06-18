@@ -1,12 +1,14 @@
 package Exercise.AK.IBAN;
 
-public class FalscheIBANException {
+public class FalscheIBANException extends RuntimeException  { //unchecked
 
-    String iban;
-
-    public FalscheIBANException() {}
-
-    public FalscheIBANException(String iban) {
-        this.iban = iban;
+    public FalscheIBANException() {
+        super("Ungültige IBAN");
     }
+
+    public FalscheIBANException(String message) {
+        super(message);
+    }
+
+
 }
