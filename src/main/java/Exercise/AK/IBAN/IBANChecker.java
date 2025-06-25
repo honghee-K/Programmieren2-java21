@@ -35,7 +35,7 @@ public class IBANChecker {
         return unguetligeIbans;
     }
 
-    public Map liesIbanAusDateien(String[] dateinamen){
+    public Map<String, List<String>> liesIbanAusDateien(String[] dateinamen){
         Map<String, List<String>> ungueltigeDateien = new HashMap<>();
 
         for(String dateiname : dateinamen){
