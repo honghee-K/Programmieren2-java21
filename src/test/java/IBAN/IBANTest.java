@@ -50,11 +50,11 @@ public class IBANTest {
 
         //3. lambda mit Assertion
         assertThrows(FalscheIBANException.class, () -> {
-            ibanChecker.checkIban("DE2130120400000BY15228");
+            ibanChecker.checkIban("DE2130120400000BY1522");
         });
 
         assertDoesNotThrow(() -> {
-            ibanChecker.checkIban("DF12345678901234567890");
+            ibanChecker.checkIban("DE12345678901234567890");
         });
 
     }
