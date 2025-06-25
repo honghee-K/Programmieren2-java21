@@ -13,6 +13,8 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class IBANTest {
 
     static Path file1;
@@ -31,24 +33,30 @@ public class IBANTest {
     public void testVaildIBAN(){
         IBANChecker ibanChecker = new IBANChecker();
 
-        //Annoyance executable
+        //1. Anonymous executable
         Executable executable = new Executable() {
             @Override
             public void execute() throws Throwable {
                 ibanChecker.checkIban("DF2130120400000BY1528");
             }
         };
-        //lambda
+
+        //2. lambda
         Executable executable2 = () -> {
             ibanChecker.checkIban("DE2130120400000BY1");
         };
-        Executable executable3 = () -> {
-            ibanChecker.checkIban("DE2130120400000BY15228");
-        };
+        assertThrows(FalscheIBANException.class, executable2);
 
-        Assertions.assertThrows(FalscheIBANException.class, executable);
-        Assertions.assertThrows(FalscheIBANException.class, executable2);
-        Assertions.assertDoesNotThrow(executable3);
+
+        //3. lambda mit Assertion
+        assertThrows(FalscheIBANException.class, () -> {
+            ibanChecker.checkIban("DE2130120400000BY15228");
+        });
+
+        assertDoesNotThrow(() -> {
+            ibanChecker.checkIban("DF12345678901234567890");
+        });
+
     }
 
     @Test
@@ -57,6 +65,6 @@ public class IBANTest {
         List<String> ungueltigeList = new ArrayList<>();
         ungueltigeList.add("XX999");
 
-        Assertions.assertEquals(ungueltigeList, ibanChecker.liesIbanAusDatei(file1.toString()));
+        assertEquals(ungueltigeList, ibanChecker.liesIbanAusDatei(file1.toString()));
     }
 }
