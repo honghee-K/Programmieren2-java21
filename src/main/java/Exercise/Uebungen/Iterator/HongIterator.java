@@ -34,10 +34,12 @@ public class HongIterator implements Iterator<String> {
     public static void main(String[] args) {
         Iterator <String> it = new HongIterator () ;
         while ( it . hasNext () ) {
-            String name = it . next () ;
-            System . out . println ( name ) ;
+         //   String name = it . next () ;
+            System . out . println ( it.next() ) ;
         }
     }
+
+
 
 }
 
