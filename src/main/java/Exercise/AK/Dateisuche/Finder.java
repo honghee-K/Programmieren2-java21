@@ -13,25 +13,25 @@ public class Finder {
         return br;
     }
 
-    public void findStringInFiles(String searchString, String[] filenames)   {
-        for(String filename : filenames){
-            try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+    public void findStringInFiles(String searchString, String[] filenames) {
+        for (String filename : filenames) {
+            try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
                 String line = "";
                 int lineNum = 1;
-                while((line = br.readLine()) != null){
-                    if(line.contains(searchString)) {
+                while ((line = br.readLine()) != null) {
+                    if (line.contains(searchString)) {
                         System.out.println(searchString + "wurde in der Datei " + filename + " in der " + lineNum + "-ten Zeile gefunden.");
                     }
                     lineNum++;
                 }
-            } catch(IOException e){
+            } catch (IOException e) {
                 System.out.println("Der Datei wurde nicht geöffenet.");
             }
         }
 
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         Finder finder = new Finder();
         BufferedReader br = finder.getSystemInAsBufferedReader();
         String searchString = null;
@@ -41,6 +41,7 @@ public class Finder {
             br.close();
         } catch (IOException ex) {
             System.out.println("Einlesen fehlgeschlagen.");
-        };
+        }
+        ;
     }
 }
