@@ -1,0 +1,18 @@
+package Exercise.AK.Twotter2;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class User implements Serializable {
+    final String benutzername;
+    String passwort;
+    List<Message> messageList = new ArrayList<>();
+
+    public User(String benutzername, String passwort){
+        this.benutzername = benutzername;
+        this.passwort = passwort;
+    }
+
+
+}

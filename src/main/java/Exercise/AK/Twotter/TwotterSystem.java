@@ -5,7 +5,6 @@ import java.util.*;
 public class TwotterSystem {
 
     Map<User, List<Message>> userMessageMap = new HashMap<>();
-    Map<Integer, String> test = new HashMap<>();
 
     public void addMessage(User user, Message message) {
         if (!userMessageMap.containsKey(user)) {
@@ -31,6 +30,7 @@ public class TwotterSystem {
         return messageList.stream().flatMap(L -> L.stream()).toList();
     }
 
+    //das ist falsch, oder? wenn es die user im Map nicht gibt ? ChatGpt sagte, dass man equals(), hashCode() im Klass User überschreiben muss..
     public List<Message> getAllMessagesFromUser(User user) {
         return userMessageMap.get(user);
     }
