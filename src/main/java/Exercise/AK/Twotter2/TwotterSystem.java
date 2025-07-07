@@ -1,6 +1,7 @@
 package Exercise.AK.Twotter2;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class TwotterSystem {
 
@@ -65,6 +66,21 @@ public class TwotterSystem {
                 .flatMap(entry -> entry.getValue().stream())
                 .toList();*/
 
+       /* Übungen
+       Integer c = 7;
+        String b = "" + c;
+
+        List<User> userList1 = new ArrayList<>();
+        //userList1.stream().map(u -> u.alt).map(a -> a.toString()).toList();
+        Stream<User> stream1 = userList1.stream();
+        Stream<Integer> stream2 = stream1.map(u -> u.alt);
+        stream2.forEach(i -> {
+            if(i > 7){
+                i++;
+            } else {
+                i--;
+            }
+        });*/
 
         // !!!!!!!!!!!!!!!Was ist genau map()?
         return userList.entrySet().stream()
@@ -72,6 +88,8 @@ public class TwotterSystem {
                 .map(entry -> entry.getValue())
                 .findFirst()
                 .orElse(new ArrayList<>());
+
+
 
     }
 
