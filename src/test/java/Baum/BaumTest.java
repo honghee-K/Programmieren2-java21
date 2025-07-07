@@ -2,14 +2,14 @@ package Baum;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import Exercise.Uebungen.Lek22.Baum;
+import Exercise.AK.BaumVisitor.Baum;
 import org.junit.jupiter.api.Test;
 
 public class BaumTest {
 
     @Test
     void testSize() {
-        Baum<Integer> baum = new Baum<>();
+        Baum <Integer> baum = new Baum<>();
         baum.einfuegen(10);
         baum.einfuegen(5);
         baum.einfuegen(15);
