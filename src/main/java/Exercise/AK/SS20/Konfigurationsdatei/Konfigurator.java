@@ -3,15 +3,17 @@ package Exercise.AK.SS20.Konfigurationsdatei;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Konfigurator {
-    public static List<String> liesKonfigurationsdatei() throws IOException {
+    public  List<String> liesKonfigurationsdatei() throws IOException {
         List<String> konfigurations = new ArrayList<>();
-        try(BufferedReader br = new BufferedReader(new FileReader("Konfigurationsdatei.txt"))){
+            try(BufferedReader br = new BufferedReader(new InputStreamReader(
+                    getClass().getClassLoader().getResourceAsStream("Konfigurationsdatei.txt")))){
         String line;
         while((line = br.readLine()) != null){
             konfigurations.add(line);
