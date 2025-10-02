@@ -1,4 +1,4 @@
-package SS25_Test;
+package SS25;
 
 import SS25.AK.WS22_23.A3.Artikel;
 import SS25.AK.WS22_23.A3.Main;

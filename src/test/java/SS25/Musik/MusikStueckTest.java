@@ -1,4 +1,4 @@
-package SS25_Test.Musik;
+package SS25.Musik;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

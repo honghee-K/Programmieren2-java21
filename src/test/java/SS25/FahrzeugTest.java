@@ -1,3 +1,3 @@
-package SS25_Test;
+package SS25;
 
 public class FahrzeugTest {}

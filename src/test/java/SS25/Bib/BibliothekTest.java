@@ -1,4 +1,4 @@
-package SS25_Test.Bib;
+package SS25.Bib;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

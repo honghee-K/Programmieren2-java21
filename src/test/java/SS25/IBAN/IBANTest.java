@@ -1,4 +1,4 @@
-package SS25_Test.IBAN;
+package SS25.IBAN;
 
 import SS25.AK.IBAN.FalscheIBANException;
 import SS25.AK.IBAN.IBANChecker;

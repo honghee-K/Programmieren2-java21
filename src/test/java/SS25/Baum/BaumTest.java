@@ -1,4 +1,4 @@
-package SS25_Test.Baum;
+package SS25.Baum;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

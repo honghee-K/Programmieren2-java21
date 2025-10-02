@@ -1,4 +1,4 @@
-package SS25_Test.Konfigurationsdatei;
+package SS25.Konfigurationsdatei;
 
 import SS25.AK.SS20.Konfigurationsdatei.Konfigurator;
 import org.junit.jupiter.api.Test;
