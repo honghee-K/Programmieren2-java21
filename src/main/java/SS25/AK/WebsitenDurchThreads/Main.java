@@ -9,9 +9,9 @@ public class Main {
         WebsiteChangeWatcher websiteChangeWatcher = new WebsiteChangeWatcher("https://www.zeit.de", "campus", consumer);
         Thread myThread = new Thread(websiteChangeWatcher);
         myThread.start();
-        try{
+        try {
             myThread.sleep(120000);
-        } catch(InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

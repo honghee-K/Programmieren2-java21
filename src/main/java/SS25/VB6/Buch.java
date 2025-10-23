@@ -15,7 +15,7 @@ public class Buch implements Comparable<Buch> {
         // 순서 기준이 뭐야?
         int result = Integer.compare(o.seiten, this.seiten); // absteigend
         if (result == 0) {
-            result = this.titel.compareTo(o.titel); //aufsteigend
+            result = this.titel.compareTo(o.titel); // aufsteigend
         } //
         return result;
 

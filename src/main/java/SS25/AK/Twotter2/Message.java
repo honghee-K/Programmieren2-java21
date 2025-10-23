@@ -7,7 +7,7 @@ public class Message {
     private final String creationDate;
 
     public Message(String text) {
-        if(text.length() > 140){
+        if (text.length() > 140) {
             throw new IllegalArgumentException("Message darf maximal 140 Zeichen erhalten");
         }
         this.text = text;

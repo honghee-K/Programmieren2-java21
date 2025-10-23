@@ -5,11 +5,12 @@ import java.util.*;
 public class WortVorkommen {
     Map<Wort, List<Position>> wortVorkommen;
 
-    public WortVorkommen(){
+    public WortVorkommen() {
         wortVorkommen = new HashMap<>();
     }
-    public void einfuegen(Wort w, Position position){
-        if(!wortVorkommen.containsKey(w)){
+
+    public void einfuegen(Wort w, Position position) {
+        if (!wortVorkommen.containsKey(w)) {
             List<Position> positions = new ArrayList<>();
             positions.add(position);
             wortVorkommen.put(w, positions);
@@ -18,25 +19,25 @@ public class WortVorkommen {
         }
     }
 
-    public Collection<Position> holeAlle(Wort w){
-        if(wortVorkommen.containsKey(w)){
+    public Collection<Position> holeAlle(Wort w) {
+        if (wortVorkommen.containsKey(w)) {
             return wortVorkommen.get(w);
         } else {
             return new ArrayList<>();
         }
     }
 
-    public Position holeLetztePosition(Wort w){
+    public Position holeLetztePosition(Wort w) {
         List<Position> positionsWithWort = wortVorkommen.get(w);
-        if(positionsWithWort != null && !positionsWithWort.isEmpty()){
-            return positionsWithWort.get(positionsWithWort.size()-1);
+        if (positionsWithWort != null && !positionsWithWort.isEmpty()) {
+            return positionsWithWort.get(positionsWithWort.size() - 1);
         } else {
             return null;
         }
     }
 
-    public int anzahlVorkommen(Wort w){
-        if(wortVorkommen.containsKey(w)){
+    public int anzahlVorkommen(Wort w) {
+        if (wortVorkommen.containsKey(w)) {
             return wortVorkommen.get(w).size();
         } else {
             return 0;

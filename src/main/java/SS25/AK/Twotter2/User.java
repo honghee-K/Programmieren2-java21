@@ -11,10 +11,8 @@ public class User implements Serializable {
     int alt;
     List<Message> messageList = new ArrayList<>();
 
-    public User(String benutzername, String passwort){
+    public User(String benutzername, String passwort) {
         this.benutzername = benutzername;
         this.passwort = passwort;
     }
-
-
 }

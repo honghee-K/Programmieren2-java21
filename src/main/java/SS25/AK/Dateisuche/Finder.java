@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class Finder {
 
-    //Byte-Stream der Tastatureingabe(System.in) -> Character-Stream = InputStreamReader
+    // Byte-Stream der Tastatureingabe(System.in) -> Character-Stream = InputStreamReader
     public BufferedReader getSystemInAsBufferedReader() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         return br;
@@ -20,7 +20,8 @@ public class Finder {
                 int lineNum = 1;
                 while ((line = br.readLine()) != null) {
                     if (line.contains(searchString)) {
-                        System.out.println(searchString + "wurde in der Datei " + filename + " in der " + lineNum + "-ten Zeile gefunden.");
+                        System.out.println(searchString + "wurde in der Datei " + filename + " in der " + lineNum
+                                + "-ten Zeile gefunden.");
                     }
                     lineNum++;
                 }
@@ -28,7 +29,6 @@ public class Finder {
                 System.out.println("Der Datei wurde nicht geöffenet.");
             }
         }
-
     }
 
     public static void main(String[] args) {

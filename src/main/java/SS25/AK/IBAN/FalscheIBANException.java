@@ -1,6 +1,6 @@
 package SS25.AK.IBAN;
 
-public class FalscheIBANException extends RuntimeException  { //unchecked
+public class FalscheIBANException extends RuntimeException { // unchecked
 
     public FalscheIBANException() {
         super("Ungültige IBAN");
@@ -9,6 +9,4 @@ public class FalscheIBANException extends RuntimeException  { //unchecked
     public FalscheIBANException(String message) {
         super(message);
     }
-
-
 }

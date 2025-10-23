@@ -5,9 +5,8 @@ import java.util.function.Predicate;
 
 public class Main {
 
-
     // Q. Muss man der Interface in Aritkel Class implementieren, auch wenn auf der Aufgabe nicht steht.
-    public List<Artikel> einmalSpielbar (List<Artikel> liste){
+    public List<Artikel> einmalSpielbar(List<Artikel> liste) {
         return liste.stream()
                 .filter(a -> a instanceof IstEinmalSpielbar isb && isb.einmalSpielbar())
                 .toList();

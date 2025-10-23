@@ -1,14 +1,13 @@
 package WS25.Lek14;
 
-import WS25.Lek14.Adresse;
-import WS25.Lek14.Person;
-import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 public class PersonTest {
 
     @Test
-    void testPerson(){
+    void testPerson() {
         Person p = new Person("Braun", "Kim", new Adresse("Peter-Schneider", "7", "97074", "Wuerzburg"));
 
         assertEquals("Braun", p.vorname);
@@ -17,11 +16,10 @@ public class PersonTest {
         assertEquals("7", p.adresse.hausnummer);
         assertEquals("97074", p.adresse.postleitzahl);
         assertEquals("Wuerzburg", p.adresse.ort);
-
     }
 
     @Test
-    void pruefeBedingung(){
+    void pruefeBedingung() {
         assertThrows(RuntimeException.class, () -> {
             new Person("braun", "Kim", new Adresse("Peter-Schneider", "7", "97074", "Wuerzburg"));
         });
@@ -31,7 +29,5 @@ public class PersonTest {
         assertThrows(RuntimeException.class, () -> {
             new Person("Braun", "Kim", new Adresse("Peter-Schneider", "7", "97074", "wuerzburg"));
         });
-
-
     }
 }

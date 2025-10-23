@@ -9,7 +9,7 @@ public class BaumTest {
 
     @Test
     void testSize() {
-        Baum <Integer> baum = new Baum<>();
+        Baum<Integer> baum = new Baum<>();
         baum.einfuegen(10);
         baum.einfuegen(5);
         baum.einfuegen(15);

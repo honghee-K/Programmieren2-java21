@@ -1,15 +1,14 @@
 package SS25.AK.BaumVisitor;
 
-public class Baum<E extends Comparable<E>>
-{
-    public static class Knoten<E>
-    {
+public class Baum<E extends Comparable<E>> {
+    public static class Knoten<E> {
         Knoten<E> left;
         Knoten<E> right;
         E content;
     }
 
     Knoten<E> root;
+
     public void einfuegen(E content) {
         Knoten<E> neu = new Knoten<>();
         neu.content = content;
@@ -42,18 +41,19 @@ public class Baum<E extends Comparable<E>>
             parent.right = neu;
         }
     }
-    protected void traversiere(Visitor<E> visitor)
-    {
+
+    protected void traversiere(Visitor<E> visitor) {
         if (root == null) return;
         else traversiere(root, visitor);
     }
-    protected void traversiere(Knoten<E> current, Visitor<E> visitor)
-    {
+
+    protected void traversiere(Knoten<E> current, Visitor<E> visitor) {
         if (current.left != null) traversiere(current.left, visitor);
         visitor.visit(current);
         if (current.right != null) traversiere(current.right, visitor);
     }
-    public int size(){
+
+    public int size() {
         CounterVisitor counterVisitor = new CounterVisitor();
         traversiere(counterVisitor);
         return counterVisitor.getCount();

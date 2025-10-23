@@ -12,26 +12,21 @@ public class Flatten {
     public List<String> flatten(List<List<String>> input) {
 
         List<String> result = new ArrayList<>();
-//        for(List<String> innerlist : input){
-//            for(String list : innerlist){
-//                result.add(list);
-//            }
-//        }
-        return input.stream()
-                .flatMap(innerlist -> innerlist.stream())
-                .collect(Collectors.toList());
-        //return result;
+        //        for(List<String> innerlist : input){
+        //            for(String list : innerlist){
+        //                result.add(list);
+        //            }
+        //        }
+        return input.stream().flatMap(innerlist -> innerlist.stream()).collect(Collectors.toList());
+        // return result;
 
     }
 
     public static void main(String[] args) {
         Flatten flatten = new Flatten();
 
-        List<List<String>> input = Arrays.asList(
-                Arrays.asList("A", "B"),
-                Arrays.asList("C", "D", "E"),
-                Arrays.asList("F")
-        );
+        List<List<String>> input =
+                Arrays.asList(Arrays.asList("A", "B"), Arrays.asList("C", "D", "E"), Arrays.asList("F"));
         System.out.println(flatten.flatten(input));
     }
 }

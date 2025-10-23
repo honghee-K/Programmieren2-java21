@@ -14,8 +14,8 @@ public class Main {
         userList.add(user);
         userList.add(user2);
 
-        //Schreiben Sie eine main-Methode und zeigen Sie an einem sinnvollen Beispiel, wie eine Liste
-        //von User-Objekten mit Hilfe von UserManager geschrieben werden kann.
+        // Schreiben Sie eine main-Methode und zeigen Sie an einem sinnvollen Beispiel, wie eine Liste
+        // von User-Objekten mit Hilfe von UserManager geschrieben werden kann.
 
         userManagers.serialize(userList);
         List<User> loadedUsers = userManagers.deserialize();

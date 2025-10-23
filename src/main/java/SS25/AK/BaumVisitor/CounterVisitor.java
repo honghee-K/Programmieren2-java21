@@ -1,6 +1,6 @@
 package SS25.AK.BaumVisitor;
-import SS25.AK.BaumVisitor.Baum.Knoten;
 
+import SS25.AK.BaumVisitor.Baum.Knoten;
 
 public class CounterVisitor<T> implements Visitor<T> {
     private int count = 0;
@@ -9,7 +9,8 @@ public class CounterVisitor<T> implements Visitor<T> {
     public void visit(Knoten<T> current) {
         count++;
     }
-    public int getCount(){
+
+    public int getCount() {
         return count;
     }
 }

@@ -9,27 +9,27 @@ import java.util.List;
 import java.util.Map;
 
 public class Konfigurator {
-    public  List<String> liesKonfigurationsdatei() throws IOException {
+    public List<String> liesKonfigurationsdatei() throws IOException {
         List<String> konfigurations = new ArrayList<>();
-            try(BufferedReader br = new BufferedReader(new InputStreamReader(
-                    getClass().getClassLoader().getResourceAsStream("Konfigurationsdatei.txt")))){
-        String line;
-        while((line = br.readLine()) != null){
-            konfigurations.add(line);
+        try (BufferedReader br = new BufferedReader(
+                new InputStreamReader(getClass().getClassLoader().getResourceAsStream("Konfigurationsdatei.txt")))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                konfigurations.add(line);
+            }
         }
-    }
-    return konfigurations;
+        return konfigurations;
     }
 
-    public Map<String, String> teilKonfigurationsdateiAuf(){
+    public Map<String, String> teilKonfigurationsdateiAuf() {
         Map<String, String> konfigurations = new HashMap<>();
         int gleichheitszeichenIdx = 0;
-        try{
-            for(String s : liesKonfigurationsdatei()){
+        try {
+            for (String s : liesKonfigurationsdatei()) {
                 gleichheitszeichenIdx = s.indexOf("=");
-                konfigurations.put(s.substring(0, gleichheitszeichenIdx), s.substring(gleichheitszeichenIdx+1));
+                konfigurations.put(s.substring(0, gleichheitszeichenIdx), s.substring(gleichheitszeichenIdx + 1));
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return konfigurations;
