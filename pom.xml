@@ -5,10 +5,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>java-21-maven-template</name>
-
-    <groupId>template</groupId>
-    <artifactId>java-21-maven-template</artifactId>
+    <groupId>Programmieren2-java21</groupId>
+    <artifactId>Programmieren2-java21</artifactId>
     <version>1.0</version>
 
     <packaging>jar</packaging>
