@@ -19,7 +19,7 @@ public class Getraenk {
         return "Herkunft: " + herkunft + "\n" +
                 "Sorte: " + sorte + "\n" +
                 "Alkoholgehalt: " + gehalt + "\n" +
-                "alkoholfrei: " + (istAlkoholfrei() ? "ja" : "nein");
+                "alkoholfrei: " + (istAlkoholfrei() ? "ja" : "nein") ;
     }
 
 
