@@ -1,12 +1,11 @@
-/*
 package WS25.Lek16.schach;
 
 public class Dame extends AbstractFigur implements Laeufer, Turm
 {
   Laeufer laeufer;
   Turm turm;
-  
-  public Dame(int x, int y)
+
+  public Dame(int x, int y) // Komposition
   {
     super(x, y);
     laeufer = new LaeuferImpl(x, y);
@@ -38,4 +37,4 @@ public class Dame extends AbstractFigur implements Laeufer, Turm
     }
   }
 }
-*/
+

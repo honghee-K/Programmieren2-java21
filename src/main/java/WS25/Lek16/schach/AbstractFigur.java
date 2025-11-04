@@ -1,6 +1,6 @@
 package WS25.Lek16.schach;
 
-public abstract class AbstractFigur implements Figur
+public abstract class  AbstractFigur implements Figur
 {
   int x;
   int y;

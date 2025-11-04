@@ -1,5 +1,7 @@
 package WS25.Lek16.schach;
 
+// Queen: Dame, Rook: Turm, Bishop: Läufe, Knight: Springer, Pawn: Bauer
+
 public class LaeuferImpl extends AbstractFigur implements Laeufer
 {
   public LaeuferImpl(int x, int y)
@@ -11,11 +13,16 @@ public class LaeuferImpl extends AbstractFigur implements Laeufer
   {
     Brett brett = new Brett();
     int[][] richtungen = {{1,1}, {1,-1}, {-1,1}, {-1,-1}};
-    for(int[] richtung : richtungen){
-      int x = this.getX();
-      int y = this.getY();
+      int newX = x;
+      int newY = y;
 
-      //TODO: Erg�nzen Sie den Algorithmus zur Bestimmung der Felder
+    for(int[] richtung : richtungen){
+       while(true){
+           newX += richtung[0];
+           newY += richtung[1];
+           if(newX < 1 || newX > 8 || newY < 1 || newY > 8) break;
+           brett.markiereFeld(newX, newY);
+       }
 
     }
 
