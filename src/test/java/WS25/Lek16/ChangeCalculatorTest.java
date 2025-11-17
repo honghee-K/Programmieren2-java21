@@ -1,9 +1,9 @@
 package WS25.Lek16;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 import WS25.Lek16.muenzautomat.ChangeCalculatorImpl;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class ChangeCalculatorTest {
 

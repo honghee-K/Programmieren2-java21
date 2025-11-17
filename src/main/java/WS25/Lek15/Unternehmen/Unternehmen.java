@@ -6,7 +6,7 @@ import java.util.List;
 public class Unternehmen {
     private List<Abteilung> abteilungen = new ArrayList<>();
 
-    public List<Abteilung> getAbteilungen(){
-        return  abteilungen;
+    public List<Abteilung> getAbteilungen() {
+        return abteilungen;
     }
 }

@@ -1,6 +1,6 @@
 package WS25.Tutorium.Getraenkevoerrakte;
 
-//Zusätzliche Aufgabe Lek 15.u4
+// Zusätzliche Aufgabe Lek 15.u4
 public class Getraenk {
 
     public String herkunft;
@@ -13,19 +13,15 @@ public class Getraenk {
         this.gehalt = gehalt;
     }
 
-
     @Override
     public String toString() {
-        return "Herkunft: " + herkunft + "\n" +
-                "Sorte: " + sorte + "\n" +
-                "Alkoholgehalt: " + gehalt + "\n" +
-                "alkoholfrei: " + (istAlkoholfrei() ? "ja" : "nein") ;
+        return "Herkunft: " + herkunft + "\n" + "Sorte: "
+                + sorte + "\n" + "Alkoholgehalt: "
+                + gehalt + "\n" + "alkoholfrei: "
+                + (istAlkoholfrei() ? "ja" : "nein");
     }
 
-
-    public boolean istAlkoholfrei(){
+    public boolean istAlkoholfrei() {
         return gehalt < 0.5;
     }
-
-
 }

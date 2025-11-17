@@ -10,13 +10,13 @@ public abstract class Angestellter {
     private double gehaltfaktor;
     private LocalDate geburtsdatum;
 
-    public Angestellter(String nachname, String vorname, int id, double grundgehalt, double gehaltfaktor){
+    public Angestellter(String nachname, String vorname, int id, double grundgehalt, double gehaltfaktor) {
         this.nachname = nachname;
         this.vorname = vorname;
         this.id = id;
         this.grundgehalt = grundgehalt;
         this.gehaltfaktor = gehaltfaktor;
-        this.geburtsdatum = LocalDate.of(2000,01,01);
+        this.geburtsdatum = LocalDate.of(2000, 01, 01);
     }
 
     public String getNachname() {

@@ -10,10 +10,10 @@ public abstract class Wein extends Getraenk {
 
     @Override
     public String toString() {
-        return "Herkunft: " + herkunft + "\n" +
-                "Sorte: " + sorte + "\n" +
-                "Alkoholgehalt: " + gehalt + "\n" +
-                "Jahrgang: " + jahrgang + "\n" +
-                "alkoholfrei: " + (istAlkoholfrei() ? "ja" : "nein");
+        return "Herkunft: " + herkunft + "\n" + "Sorte: "
+                + sorte + "\n" + "Alkoholgehalt: "
+                + gehalt + "\n" + "Jahrgang: "
+                + jahrgang + "\n" + "alkoholfrei: "
+                + (istAlkoholfrei() ? "ja" : "nein");
     }
 }

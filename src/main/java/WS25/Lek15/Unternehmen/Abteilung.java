@@ -7,7 +7,7 @@ public class Abteilung {
     private Abteilungsleiter abteilungsleiter;
     private List<Angestellter> angestellte = new ArrayList<>();
 
-    public List<Angestellter> getAngestellte(){
+    public List<Angestellter> getAngestellte() {
         return angestellte;
     }
 }
