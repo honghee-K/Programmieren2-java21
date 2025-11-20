@@ -3,12 +3,17 @@ package WS25.Lek17;
 import java.io.*;
 import java.util.function.Consumer;
 
+//Todo: copy Methode 만들기
+// int n;
+//            while((n = fis.read()) != -1){
+//                fos.write(n);
+//            }
 public class BufferPerformanceTest {
     private static File testFile;
 
-    public static void copyUnbuffered(String path){
+    public static void copyUnbuffered(){
         try (FileInputStream fis = new FileInputStream(testFile);
-            FileOutputStream fos = new FileOutputStream("target/unbuffered_Output")) {
+            FileOutputStream fos = new FileOutputStream("target/unbuffered_Output.mp3")) {
             int n;
             while((n = fis.read()) != -1){
                 fos.write(n);
@@ -18,10 +23,10 @@ public class BufferPerformanceTest {
         }
     }
 
-    public static void copyBuffered(String path){
+    public static void copyBuffered(){
         try (FileInputStream fis = new FileInputStream(testFile);
               BufferedInputStream bis = new BufferedInputStream(fis);
-              FileOutputStream fos = new FileOutputStream("target/unbuffered_Output");
+              FileOutputStream fos = new FileOutputStream("target/unbuffered_Output.mp3");
               BufferedOutputStream bos = new BufferedOutputStream(fos)) {
             int n;
             while((n = bis.read()) != -1) {
@@ -31,13 +36,13 @@ public class BufferPerformanceTest {
             e.printStackTrace();
         }
     }
-    public static void copyUnbufferedArray(String path){
+    public static void copyUnbufferedArray(){
         try (FileInputStream fis = new FileInputStream(testFile);
-             FileOutputStream fos = new FileOutputStream("target/unbuffered_Output")) {
+             FileOutputStream fos = new FileOutputStream("target/unbuffered_Output.mp3")) {
             int n;
             byte[] buffer = new byte[1024];
             while((n = fis.read(buffer)) != -1){
-                    fos.write(buffer,0,n);
+                    fos.write(buffer);
             }
         } catch(IOException e){
             e.printStackTrace();
@@ -79,11 +84,11 @@ public class BufferPerformanceTest {
         String path = "./target/test.mp3";
 
         // byteweise mit Hilfe eines ungepufferten Streams
-        measureTime((p) -> bpt.copyUnbuffered(p), path, "byteweise mit Hilfe eines ungepufferten Streams: ");
+        measureTime((p) -> bpt.copyUnbuffered(), path, "byteweise mit Hilfe eines ungepufferten Streams: ");
         // byteweise mit Hilfe eines gepufferten Streams
-        measureTime((p) -> bpt.copyBuffered(p), path, "byteweise mit Hilfe eines gepufferten Streams: ");
+        measureTime((p) -> bpt.copyBuffered(), path, "byteweise mit Hilfe eines gepufferten Streams: ");
         // mit einem byte[] der Größe 1024 mit Hilfe eines ungepufferten Streams
-        measureTime((p) -> bpt.copyUnbufferedArray(p), path, "mit einem byte[] der Größe 1024 mit Hilfe eines ungepufferten Streams: ");
+        measureTime((p) -> bpt.copyUnbufferedArray(), path, "mit einem byte[] der Größe 1024 mit Hilfe eines ungepufferten Streams: ");
 
 
 
