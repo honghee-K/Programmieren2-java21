@@ -1,0 +1,3 @@
+
+void process(List<? super Dog> animals);
+addDog(List<? extends Animal> animals) { .add(new Dog())}; XXXX
